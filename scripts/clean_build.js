@@ -3,15 +3,5 @@ const rm = require('rimraf');
 const build_dir = process.env.BUILD_DIR;
 
 rm(build_dir, function () {
-  console.log('|');
-  console.log(`| ${embolden("Deleted:")} ${engreen(build_dir)}`);
-  console.log('|');
+  console.log(`> ${chalk.bold("Deleted:")} ${chalk.green(build_dir)}\n`);
 });
-
-function embolden (string) {
-  return chalk.bold(string);
-}
-
-function engreen (string) {
-  return chalk.green(string);
-}

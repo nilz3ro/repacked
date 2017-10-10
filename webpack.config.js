@@ -1,11 +1,13 @@
 const path = require('path')
 
 function configure (env) {
-  console.log('path', path);
 
   return {
-    entrypoint: 'src/index.js'
+    entry: `${__dirname}/src/index.js`,
+    output: {
+      filename: `build/bundle.js`
+    }
   }
 }
 
-module.exports = configure;
+module.exports = configure

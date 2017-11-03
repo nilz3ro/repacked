@@ -33,5 +33,7 @@ class Ticker extends Component {
   }
 }
 
+const applicationRoot = document.createElement('div');
+document.body.appendChild(applicationRoot);
 
-ReactDOM.render(<App/>, document.getElementById('application_root'));
+ReactDOM.render(<App/>, applicationRoot);

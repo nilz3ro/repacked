@@ -1,10 +1,12 @@
 const path = require('path');
+const HTMLWebpackPlugin = require('html-webpack-plugin');
 
 function configure () {
   return {
     entry: `${__dirname}/src/index.js`,
     output: {
-      filename: `build/bundle.js`
+      path: `${__dirname}/build`,
+      filename: `bundle.js`
     },
     module: {
       rules: [
@@ -19,7 +21,8 @@ function configure () {
           }
         }
       ]
-    }
+    },
+    plugins: [ new HTMLWebpackPlugin()]
   }
 }
 
